@@ -1,0 +1,24 @@
+*{
+  /* margin: 0; */
+  /* padding: 0; */
+  font: normal monospace
+}
+
+body{
+  background: #000;
+  color: #fff;
+}
+
+.attrName{
+  background: green;
+  padding-left: 4px;
+  padding-right: 4px;
+  border: 2px solid #fff;
+}
+
+.value{
+  background: darkred;
+  padding-left: 4px;
+  padding-right: 4px;
+  border: 2px solid #fff;
+}
