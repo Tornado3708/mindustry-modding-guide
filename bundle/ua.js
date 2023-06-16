@@ -57,9 +57,10 @@ const ua = Object.assign( {}, list )
   .drawShields           .describe( "Чи відображати щити юніта." )
   .drownTimeMultiplier   .describe( "Множник для часу перед затопленням юніта: чим більше число, тим довше тоне." )
   .engineColor           .describe( "Колір всіх двигунів юніта." )
+  .engineLayer           .describe( "Шар для відображення двигуна. < 0 за замовчуванням." )
+
   
-  
-//     newRow( _float        , -1         , "engineLayer"             , "Шар для відображення двигуна. < 0 за замовчуванням." ),
+//     newRow( _float        , -1         , "engineLayer"             ,  ),
 //     newRow( _float        , 5          , "engineOffset"            , "Змішення двигуна назад від центру юніта." ),
 //     newRow( "UnitEngine[]", []         , "engines"                 , "Масив з двигунами(реактивними турбінами)." ),
 //     newRow( _float        , 2.5        , "engineSize"              , "Основий радіус двигуна." ),

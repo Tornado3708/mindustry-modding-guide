@@ -78,6 +78,7 @@ list
   .add( "drawShields"           ,_boolean              , _true , [ _design ] )
   .add( "drownTimeMultiplier"   , _float               , 1 )
   .add( "engineColor"           , "Color"              , _null, [ _json ] )
+  .add( "engineLayer"           ,  _float             , -1    , [ _design ] )
 
 
 export default list 
