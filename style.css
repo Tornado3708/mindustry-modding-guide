@@ -1,12 +1,12 @@
 *{
   /* margin: 0; */
   /* padding: 0; */
-  font: normal monospace
+  font-family: monospace
 }
-
 body{
   background: #000;
-  color: #fff;
+  color: #064DBF;
+  font-weight: bold;
 }
 
 .attrName{
@@ -20,5 +20,13 @@ body{
   background: darkred;
   padding-left: 4px;
   padding-right: 4px;
-  border: 2px solid #fff;
+  border: 2px solid green;
 }
+
+td {
+  padding:5px;
+  /* margin:5px; */
+  outline: 1px solid #064DBF;
+  outline-width: 2px;
+}
+/* tbody tr:not([class*=""]){ display: none; } */
