@@ -21,15 +21,39 @@ const newRowGen = func => ( ...values ) => {
 const newDesc = newRowGen( newTH ), newRow  = newRowGen( newTD )
 
 const newInput = text => ( id=text ) => `<span>${ text }:<input type=\"checkbox\" id="${ id }"/></span>`
-const json = newInput( "json" )()
-const ground = newInput( "ground" )()
-const naval = newInput( "naval" )()
-const flying = newInput( "flying" )()
+const parametr = [
+  "json",
+  "ground",
+  "flying",
+  "naval",
+  "mech",
+  "legs",
+  "crawl",
+  "missile",
+  "build",
+  "movement"
+]
 
+const json     = newInput( "json" )()
+const ground   = newInput( "ground" )()
+const flying   = newInput( "flying" )()
+const naval    = newInput( "naval" )()
+const mech     = newInput( "mech" )()
+const legs     = newInput( "legs" )()
+const crawl    = newInput( "crawl" )()
+const missile  = newInput( "missile" )()
+const build    = newInput( "build" )()
+const movement = newInput( "movement" )()
+const boost = newInput( "boost" )()
 
 function update(){
 
-  let selectors = "<div>" + json + ground  + naval + flying + "</div>"
+  const _fieldset = "<fieldset><legend>Параметри</legend>"
+  const _hr = "<hr/>"
+  let selectors = _fieldset +
+    json + _hr +
+    ground + flying + naval + _hr + 
+    mech + legs + crawl + missile + build + boost + movement + "</fieldset>"
 
 
   let head = newTHead( newDesc ("Назва", "Тип", "За замовчуванням",  "Опис" ) )
@@ -46,38 +70,49 @@ function update(){
   }
   main.innerHTML = selectors + newTable( head , body )
 
-  let checkbox = [
-    "json",
-    "ground",
-    "naval",
-    "flying"
-  ].map( id => document.getElementById( id )  )
+  const checkbox = Object.assign( [], parametr ).map( id => document.getElementById( id )  )
+
+
 
   let checked = []
+
+
 
   window.addEventListener( "change", () => {
     checkbox.forEach( ch => {
       if( !!~checked.indexOf( ch.id ) !== ch.checked ){
         ch.checked ? checked.push( ch.id ) : checked.splice( checked.indexOf( ch.id ), 1 )
       }
-     } )
-    const [,...tr] = document.getElementsByTagName( "tr" )
-     for( let i = 0; i < tr.length; i++ ){
-      checked.length
-        ? function(){
-          for( const flag of checked ){
-            if( tr[i].className.includes( flag ) ){
-              tr[ i ].style.display = "table-row"
-              break
+    } )
+     
+    const [ ,...tr ] = document.getElementsByTagName( "tr" )
+    const list = []
+    if( checked.length ){
+      for( let i = 0; i < tr.length; i++ ){
+        if( tr[i].className.includes( checked[ 0 ] ) ) list.push( tr[ i ] )
+        tr[ i ].style.display = "none"
+      }
+      if( list.length > 1 ){
+        for( let i = 1; i < checked.length; i++ ){
+          let j = 0;
+          while( j < list.length ){
+            if( !list[ j ].className.includes( checked[ i ] ) ){
+              list.splice( j, 1 )
+              j--
             }
-            tr[ i ].style.display = "none"
+            j++
           }
-        }()
-        : tr[ i ].style.display = "table-row"
-     }
-     console.log( checked )
-  } )
-
+        }
+      }
+      list.forEach( el => { el.style.display = "table-row" } )
+    } else {
+      for( let i = 0; i < tr.length; i++ ){
+        tr[ i ].style.display = "table-row"
+      }
+    }
+    console.log( list )
+  })
+  
 }
 
 update()

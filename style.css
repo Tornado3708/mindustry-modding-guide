@@ -9,7 +9,7 @@ body{
   font-weight: bold;
 }
 
-div{
+fieldset {
   border: 2px solid #064DBF;
   margin-bottom: 10px;
   padding: 10px;
@@ -35,7 +35,18 @@ td, th {
   outline: 1px solid #064DBF;
   outline-width: 2px;
 }
+table {
+  min-width: 100%;
+}
 
-
-
+nav{
+  width: 20%;
+  position: relative;
+  left: 0%;
+}
+main{
+  width: 90%;
+  position: relative;
+  left: 10%;
+}
 /* tbody tr:not([class*=""]){ display: none; } */
