@@ -1,0 +1,178 @@
+ + abilities
+ + accel
+ + aiController
+ + aimDst
+ + allowedInPayloads
+ + allowLegStep
+ + alwaysCreateOutline
+ + alwaysShootWhenMoving
+ + ammoCapacity
+ + ammoType
+ + armor
+ + autoFindTarget
+
+ + baseLegStraightness
+ + baseRotateSpeed
+ + boostMultiplier
+ + bounded
+ + buildBeamOffset
+ + buildRange
+ + buildSpeed
+
+ + canAttack
+ + canBoost
+ + canDrown
+ + canHeal
+ + circleTarget
+ + clipSize
+ + commands
+ + constructor
+ + controller
+ + coreUnitDock
+ + crashDamageMultiplier
+ + crawlSlowdown
+ + crawlSlowdownFrac
+ + createScorch
+ + createWreck
+ + crushDamage
+
+ + deathExplosionEffect
+ + deathSound
+ + defaultCommand
+ + dpsEstimate
+ + drag
+ + drawBody
+ + drawBuildBeam
+ + drawCell
+ + drawItems
+ + drawMinimap
+ + drawShields
+ + drownTimeMultiplier
+ + engineColor
+ + engineColorInner
+ + engineLayer
+ + engineOffset
+
+engines
+engineSize
+envEnabled
+envDisabled
+envRequired
+faceTarget
+fallEffect
+fallEngineEffect
+fallSpeed
+flipBackLegs
+flipLegSide
+flying
+fogRadius
+forceMultiTarget
+groundLayer
+healColor
+healFlash
+health
+hidden
+hitSize
+hittable
+homingDelay
+hoverable
+hovering
+itemOffsetY
+isEnemy
+immunities
+internal
+itemCapacity
+killable
+legContinuousMove
+legCount
+legGroupSize
+legBaseOffset
+legExtension
+legForwardScl
+legLength
+legLengthScl
+legMaxLength
+legMinLength
+legMoveSpace
+legPairOffset
+legPhysicsLayer
+legSpeed
+legSplashDamage
+legSplashRange
+legStraightLength
+legStraightness
+lifetime
+lightColor
+lightOpacity
+lightRadius
+lockLegBase
+logicControllable
+loopSound
+loopSoundVolume
+lowAltitude
+maxRange
+mechFrontSway
+mechLandShake
+mechLegColor
+mechSideSway
+mechStepParticles
+mechStride
+mineFloor
+mineHardnessScaling
+mineItems
+mineRange
+mineSound
+mineSoundVolume
+mineSpeed
+mineTier
+missileAccelTime
+naval
+omniMovement
+outlineColor
+outlineRadius
+outlines
+parts
+pathCost
+payloadCapacity
+pickupUnits
+playerControllable
+physics
+range
+researchCostMultiplier
+rippleScale
+riseSpeed
+rotateMoveFirst
+rotateSpeed
+rotateToBuilding
+sample
+segmentMag
+segments
+segmentScl
+segmentPhase
+segmentRotSpeed
+segmentMaxRot
+shadowElevation
+shadowElevationScl
+singleTarget
+speed
+squareShape
+stepShake
+strafePenalty
+targetable
+targetAir
+targetFlags
+targetGround
+targetPriority
+trailColor
+trailLength
+trailScl
+treadEffect
+treadFrames
+treadPullOffset
+treadRects
+useEngineElevation
+useUnitCap
+vulnerableWithPayloads
+waveTrailX
+waveTrailY
+weapons
