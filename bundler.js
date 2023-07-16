@@ -3,7 +3,9 @@ import UA from "./bundle/bundle_ua.js"
 export const lang = "ua"
 
 const ua = new Map([
-  [ "Unittype", Object.assign( {}, UA.Unittype ) ]
+  [ 'BulletType', Object.assign( {}, UA.BulletType ) ],
+  [ "UnitType"  , Object.assign( {}, UA.UnitType )],
+  [ "Weapon"    , Object.assign( {}, UA.Weapon ) ],
 ])
 
 

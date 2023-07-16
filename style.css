@@ -7,6 +7,8 @@ body{
   background: #000;
   color: #064DBF;
   font-weight: bold;
+  position: absolute;
+
 }
 
 fieldset {
@@ -14,7 +16,6 @@ fieldset {
   margin-bottom: 10px;
   padding: 10px;
 }
-
 .attrName{
   background: green;
   padding-left: 4px;
@@ -35,22 +36,25 @@ td, th {
   outline: 1px solid #064DBF;
   outline-width: 2px;
 }
-table {
-  min-width: 100%;
-}
+table { width: 100%; }
 
 nav{
-  width: 10%;
-  position: relative;
-  left: 0%;
+  width:calc(10% - 10px);
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 main{
-  width: 90%;
-  position: relative;
-  left: 10%;
+  width: calc(90% - 10px);
+  right: 0;
+  float: right;
 }
 /* tbody tr:not([class*=""]){ display: none; } */
 
 button{
   width: 100%
+}
+footer{
+  width: 100%;
+  display: block;
 }

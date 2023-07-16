@@ -9,6 +9,8 @@ export const empty = {
 }
 
 export const Ability = "Ability"
+export const BulletType = "BulletType"
+export const Bullets = "Bullets"
 export const Color = "Color"
 export const Colors = Color+"s"
 export const DrawPart = "DrawPart"
@@ -17,6 +19,8 @@ export const Fx = "Fx"
 export const Item = "Item"
 export const Items = Item+"s"
 export const itemAmmoType = Item+"AmmoType"
+export const Liquid = "Liquid"
+export const ShootPattern = "ShootPattern"
 export const Sound = "Sound"
 export const StatusEffect = "StatusEffect"
 export const Sounds = Sound+"s"
@@ -24,7 +28,9 @@ export const Unit = "Unit"
 export const UnitController = Unit+'Controller'
 export const UnitCommand = Unit+"Command"
 export const UnitEngine = Unit+"Engine"
+export const UnitType = Unit+"Type"
 export const Weapon = "Weapon"
+export const WeaponMount = Weapon+"Mount"
 
 
 export const setArr = className => className+"[]"
@@ -41,10 +47,12 @@ export const[ Func, ObjectSet, Prov, Seq ] = [
   
 ].map( name => setType( name ) )
 
-export const [ ColorParam, FxParam, SoundsParam ] = [
+export const [ BulletsParam, ColorParam, FxParam, SoundsParam, StatusEffectsParam ] = [
+  Bullets,
   Color,
   Fx,
-  Sounds
+  Sounds,
+  StatusEffect+"s"
 ].map( name => setParam( name ) )
 
 
